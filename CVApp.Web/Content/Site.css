@@ -81,6 +81,11 @@ h6,
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+h2,
+.h2 {
+    margin-bottom: 20px;
+}
+
 .form-group {
     margin-bottom: 20px;
 }

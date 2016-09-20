@@ -1,7 +1,49 @@
 ﻿@model CVApp.Web.ViewModels.CandidateViewModel
 @{
     ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Create</h2>
+<h2>Add a Candidate</h2>
+@using (Html.BeginForm("Create", "Candidates"))
+{
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        @Html.Label("First name")
+        @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control", autofocus = "autofocus" })
+        @Html.ValidationMessageFor(m => m.FirstName)
+    </div>
+    <div class="form-group">
+        @Html.Label("Last name")
+        @Html.TextBoxFor(m => m.LastName, new { @class = "form-control"})
+        @Html.ValidationMessageFor(m => m.LastName)
+    </div>
+    <div class="form-group">
+        @Html.Label("Phone")
+        @Html.TextBoxFor(m => m.PhoneNumber, new {@class = "form-control", placeholder = "+00 123-456-789"})
+        @Html.ValidationMessageFor(m => m.PhoneNumber)
+    </div>
+    <div class="form-group">
+        @Html.Label("E-mail")
+        @Html.TextBoxFor(m => m.EmailAddress, new {@class = "form-control"})
+        @Html.ValidationMessageFor(m => m.EmailAddress)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.City)
+        @Html.TextBoxFor(m => m.City, new {@class = "form-control"})
+        @Html.ValidationMessageFor(m => m.City)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Positions)
+        @Html.DropDownListFor(m => m.Positions, new SelectList(Model.Positions, "Id", "Name"), "Choose position", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Positions)
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+}
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
 
