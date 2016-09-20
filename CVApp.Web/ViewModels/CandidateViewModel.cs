@@ -27,6 +27,9 @@ namespace CVApp.Web.ViewModels
         [Required(ErrorMessage = "Accepting agreements is required to fulfill reqruitment process.")]
         public bool HasAcceptedAgreements { get; set; }
 
+        [Required(ErrorMessage = "Yours resume is required.")]
+        public byte[] ResumeFile { get; set; }
+
         public DateTime CreationDate { get; set; }
 
         public DateTime ModificationDate { get; set; }

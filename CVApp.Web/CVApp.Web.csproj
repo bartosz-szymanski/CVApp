@@ -194,6 +194,10 @@
     <Compile Include="Migrations\201609200058426_FieldNameAddedToApplicationUserEntity.Designer.cs">
       <DependentUpon>201609200058426_FieldNameAddedToApplicationUserEntity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201609201901448_AddedResumeFileFieldToCandidateModel.cs" />
+    <Compile Include="Migrations\201609201901448_AddedResumeFileFieldToCandidateModel.Designer.cs">
+      <DependentUpon>201609201901448_AddedResumeFileFieldToCandidateModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ViewModels\CandidateViewModel.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -303,6 +307,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201609200058426_FieldNameAddedToApplicationUserEntity.resx">
       <DependentUpon>201609200058426_FieldNameAddedToApplicationUserEntity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609201901448_AddedResumeFileFieldToCandidateModel.resx">
+      <DependentUpon>201609201901448_AddedResumeFileFieldToCandidateModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
