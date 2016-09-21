@@ -3,7 +3,6 @@ using CVApp.Web.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Web;
 
 namespace CVApp.Web.ViewModels
 {
@@ -35,14 +34,14 @@ namespace CVApp.Web.ViewModels
         public bool HasAcceptedAgreements { get; set; }
 
         [Display(Name = "Resume")]
-        public HttpPostedFile ResumeFile { get; set; }
+        public byte[] ResumeFile { get; set; }
 
         public DateTime CreationDate { get; set; }
 
         public DateTime ModificationDate { get; set; }
 
-        //[Required(ErrorMessage = "Position is a required field.")]
-        //[Display(Name = "Position")]
+        [Required(ErrorMessage = "Position is a required field.")]
+        [Display(Name = "Position")]
         public long PositionId { get; set; }
 
         public IEnumerable<Position> Positions { get; set; }

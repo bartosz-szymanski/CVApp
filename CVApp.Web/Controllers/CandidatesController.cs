@@ -2,8 +2,8 @@
 using CVApp.Web.ViewModels;
 using Microsoft.AspNet.Identity;
 using System;
+using System.IO;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace CVApp.Web.Controllers
@@ -30,7 +30,7 @@ namespace CVApp.Web.Controllers
         [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(CandidateViewModel viewModel, HttpPostedFileBase upload)
+        public ActionResult Create(CandidateViewModel viewModel, byte[] upload)
         {
             if (!ModelState.IsValid)
             {
@@ -38,12 +38,14 @@ namespace CVApp.Web.Controllers
                 return View("Create", viewModel);
             }
 
-            //byte[] uploadedFile = new byte[upload.ContentLength];
-
-            //using (var reader = new System.IO.BinaryReader(upload.InputStream))
-            //{
-            //    uploadedFile = reader.ReadBytes(upload.ContentLength);
-            //}
+            byte[] uploadedFile = new byte[upload.Length];
+            using (var fs = new FileStream(string.Empty, FileMode.Append))
+            {
+                using (var reader = new BinaryReader(fs))
+                {
+                    uploadedFile = reader.ReadBytes(upload.);
+                }
+            }
 
             var gig = new Candidate()
             {
@@ -56,8 +58,8 @@ namespace CVApp.Web.Controllers
                 HasAcceptedAgreements = viewModel.HasAcceptedAgreements,
                 PositionId = viewModel.PositionId,
                 CreationDate = DateTime.Now,
-                ModificationDate = DateTime.Now
-                //ResumeFile = uploadedFile
+                ModificationDate = DateTime.Now,
+                ResumeFile = uploadedFile
             };
             _context.Candidates.Add(gig);
             _context.SaveChanges();

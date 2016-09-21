@@ -42,9 +42,8 @@
     <div class="Resume">
         @Html.LabelFor(m => m.ResumeFile)
         @Html.TextBoxFor(m => m.ResumeFile, new {type = "file"})
-        @Html.ValidationMessageFor(m => m.ResumeFile)
     </div>   
-    <div class="checkbox">
+    <div class="form-group">
         @Html.LabelFor(m => m.HasAcceptedAgreements)
         @Html.CheckBoxFor(m => m.HasAcceptedAgreements)
         @Html.ValidationMessageFor(m => m.HasAcceptedAgreements)
