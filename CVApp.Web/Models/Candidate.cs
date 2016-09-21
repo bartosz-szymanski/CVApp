@@ -33,7 +33,6 @@ namespace CVApp.Web.Models
 
         public DateTime ModificationDate { get; set; }
 
-        [Required]
         public byte[] ResumeFile { get; set; }
 
         public Position Position { get; set; }

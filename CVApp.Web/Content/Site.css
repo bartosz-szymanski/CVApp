@@ -109,3 +109,42 @@ h2,
     -ms-border-radius: 9px;
     border-radius: 9px;
 }
+
+
+/* Index overrrides*/
+
+.candidates {
+    list-style: none;
+}
+
+
+.candidates > li {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.candidates > li .name {
+    align-items: flex-start;
+}
+
+.candidates > li .lastName {
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 125px;
+}
+.candidates > li .mail {
+    position: absolute;
+    top: 0;
+    left: 300px;
+}
+.candidates > li .details {
+    position: absolute;
+    top: 0;
+    left: 550px;
+}
+.candidates > li .resume {
+    position: absolute;
+    top: 0;
+    left: 285px;
+}

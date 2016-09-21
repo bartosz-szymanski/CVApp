@@ -1,7 +1,9 @@
+using CVApp.Web.Helpers;
 using CVApp.Web.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Web;
 
 namespace CVApp.Web.ViewModels
 {
@@ -29,19 +31,18 @@ namespace CVApp.Web.ViewModels
         public string City { get; set; }
 
         [Display(Name = "Terms and Conditions")]
-        [Range(typeof(bool), "true", "true", ErrorMessage = "You gotta tick the box, bro!")]
+        [MustBeTrue(ErrorMessage = "You gotta tick the box, bro!")]
         public bool HasAcceptedAgreements { get; set; }
 
         [Display(Name = "Resume")]
-        [Required(ErrorMessage = "Yours resume is required.")]
-        public byte[] ResumeFile { get; set; }
+        public HttpPostedFile ResumeFile { get; set; }
 
         public DateTime CreationDate { get; set; }
 
         public DateTime ModificationDate { get; set; }
 
-        [Required(ErrorMessage = "Position is a required field.")]
-        [Display(Name = "Position")]
+        //[Required(ErrorMessage = "Position is a required field.")]
+        //[Display(Name = "Position")]
         public long PositionId { get; set; }
 
         public IEnumerable<Position> Positions { get; set; }
