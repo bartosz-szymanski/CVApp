@@ -212,7 +212,13 @@
     <Compile Include="Migrations\201609211236179_ChangesInDataAnnotations.Designer.cs">
       <DependentUpon>201609211236179_ChangesInDataAnnotations.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201609222330521_AddedModelAndDBSetForLogs.cs" />
+    <Compile Include="Migrations\201609222330521_AddedModelAndDBSetForLogs.Designer.cs">
+      <DependentUpon>201609222330521_AddedModelAndDBSetForLogs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Enums\LogCategory.cs" />
+    <Compile Include="Models\Log.cs" />
     <Compile Include="Resource.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -340,6 +346,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201609211236179_ChangesInDataAnnotations.resx">
       <DependentUpon>201609211236179_ChangesInDataAnnotations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609222330521_AddedModelAndDBSetForLogs.resx">
+      <DependentUpon>201609222330521_AddedModelAndDBSetForLogs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resource.pl-PL.resx" />
     <EmbeddedResource Include="Resource.resx">

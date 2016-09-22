@@ -8,6 +8,7 @@ namespace CVApp.Web.Models
     {
         public DbSet<Candidate> Candidates { get; set; }
         public DbSet<Position> Positions { get; set; }
+        public DbSet<Log> Logs { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
