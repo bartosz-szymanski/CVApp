@@ -61,12 +61,57 @@ namespace CVApp.Web {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to About.
+        /// </summary>
+        public static string About {
+            get {
+                return ResourceManager.GetString("About", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Application allow gathering and reviewing Curriculum Vitae..
+        /// </summary>
+        public static string AboutLong {
+            get {
+                return ResourceManager.GetString("AboutLong", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add a Candidate.
+        /// </summary>
+        public static string AddACandidate {
+            get {
+                return ResourceManager.GetString("AddACandidate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Your application has been added to our candidate database.
         ///Thank you for your application, CV AppTeam!.
         /// </summary>
         public static string ApplicationAddedToDatabase {
             get {
                 return ResourceManager.GetString("ApplicationAddedToDatabase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Author.
+        /// </summary>
+        public static string Author {
+            get {
+                return ResourceManager.GetString("Author", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Candidates.
+        /// </summary>
+        public static string Candidates {
+            get {
+                return ResourceManager.GetString("Candidates", resourceCulture);
             }
         }
         
@@ -85,6 +130,42 @@ namespace CVApp.Web {
         public static string CompanyNameGoesHere {
             get {
                 return ResourceManager.GetString("CompanyNameGoesHere", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Contact.
+        /// </summary>
+        public static string Contact {
+            get {
+                return ResourceManager.GetString("Contact", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CV Collector.
+        /// </summary>
+        public static string CvCollector {
+            get {
+                return ResourceManager.GetString("CvCollector", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Resume list.
+        /// </summary>
+        public static string CVList {
+            get {
+                return ResourceManager.GetString("CVList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Download.
+        /// </summary>
+        public static string DownloadFile {
+            get {
+                return ResourceManager.GetString("DownloadFile", resourceCulture);
             }
         }
         
@@ -143,6 +224,24 @@ namespace CVApp.Web {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Log in.
+        /// </summary>
+        public static string LogIn {
+            get {
+                return ResourceManager.GetString("LogIn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Log off.
+        /// </summary>
+        public static string LogOff {
+            get {
+                return ResourceManager.GetString("LogOff", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Phone.
         /// </summary>
         public static string PhoneNumber {
@@ -179,6 +278,15 @@ namespace CVApp.Web {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Register.
+        /// </summary>
+        public static string Register {
+            get {
+                return ResourceManager.GetString("Register", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Resume.
         /// </summary>
         public static string Resume {
@@ -211,6 +319,24 @@ namespace CVApp.Web {
         public static string TermsAndConditionsRequired {
             get {
                 return ResourceManager.GetString("TermsAndConditionsRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Want to contact me?.
+        /// </summary>
+        public static string WantContact {
+            get {
+                return ResourceManager.GetString("WantContact", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Want to know more?.
+        /// </summary>
+        public static string WantMore {
+            get {
+                return ResourceManager.GetString("WantMore", resourceCulture);
             }
         }
     }

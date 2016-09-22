@@ -2,6 +2,7 @@ using CVApp.Web.Helpers;
 using CVApp.Web.Models;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Web;
 
 namespace CVApp.Web.ViewModels
 {
@@ -34,9 +35,9 @@ namespace CVApp.Web.ViewModels
         [Display(Name = nameof(Resource.TermsAndConditions), ResourceType = typeof(Resource))]
         public bool HasAcceptedAgreements { get; set; }
 
-        //[Required(ErrorMessageResourceName = nameof(Resource.ResumeRequired), ErrorMessageResourceType = typeof(Resource))]
-        //[Display(Name = nameof(Resource.Resume), ResourceType = typeof(Resource))]
-        //public byte[] ResumeFile { get; set; }
+        [Required(ErrorMessageResourceName = nameof(Resource.ResumeRequired), ErrorMessageResourceType = typeof(Resource))]
+        [Display(Name = nameof(Resource.Resume), ResourceType = typeof(Resource))]
+        public HttpPostedFileBase ResumeFile { get; set; }
 
         [Required(ErrorMessageResourceName = nameof(Resource.PositionRequired), ErrorMessageResourceType = typeof(Resource))]
         [Display(Name = nameof(Resource.Position), ResourceType = typeof(Resource))]

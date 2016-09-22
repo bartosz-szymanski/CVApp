@@ -24,17 +24,30 @@ namespace CVApp.Web.Controllers
             return View(collection.ToPagedList(pageNumber, pageSize));
         }
 
+
+        public ActionResult DownloadFile(long? id)
+        {
+            if (!id.HasValue)
+                return new EmptyResult();
+            var candidate = _context.Candidates.SingleOrDefault(c => c.Id == id.Value);
+
+            if (candidate == null)
+                return new EmptyResult();
+
+            var fileContents = candidate.ResumeFile;
+            var fileName = $"{candidate.FirstName}{candidate.LastName}{".pdf"}";
+            Response.AddHeader("Content-Disposition", $"attachment; filename={fileName}");
+            return File(fileContents, "application/octet-stream");
+
+        }
+
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
     }

@@ -5,7 +5,7 @@
 }
 
 <h2>Add a Candidate</h2>
-@using (Html.BeginForm("Create", "Candidates"))
+@using (Html.BeginForm("Create", "Candidates", FormMethod.Post, new { enctype = "multipart/form-data"}))
 {
     @Html.AntiForgeryToken()
     <div class="form-group">
@@ -36,10 +36,19 @@
 
     <div class="form-group">
         @Html.LabelFor(m => m.Positions)
-        @Html.DropDownListFor(m => m.PositionId, new SelectList(Model.Positions.ToList(), "Id", "Name"), new { @class = "form-control"})
+        @Html.DropDownListFor(m => m.PositionId, new SelectList(Model.Positions.ToList(), "Id", "Name"), new {@class = "form-control"})
         @Html.ValidationMessageFor(m => m.Positions)
     </div>
-  
+    @*<div class="form-group">
+        <input type="file" class="file" name="ResumeFile"/>
+    </div>*@
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.ResumeFile)
+        @Html.TextBoxFor(m => m.ResumeFile, new { @class = "file", type="file" })
+        @Html.ValidationMessageFor(m => m.ResumeFile)
+    </div>
+
     <div class="form-group">
         @Html.LabelFor(m => m.HasAcceptedAgreements)
         @Html.CheckBoxFor(m => m.HasAcceptedAgreements)

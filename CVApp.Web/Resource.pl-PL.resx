@@ -117,98 +117,98 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="FirstName" xml:space="preserve">
-    <value>First name</value>
-  </data>
-  <data name="FirstNameRequired" xml:space="preserve">
-    <value>First name field is required.</value>
-  </data>
-  <data name="ApplicationAddedToDatabase" xml:space="preserve">
-    <value>Your application has been added to our candidate database.
-Thank you for your application, CV AppTeam!</value>
-  </data>
-  <data name="City" xml:space="preserve">
-    <value>City</value>
-  </data>
-  <data name="CompanyNameGoesHere" xml:space="preserve">
-    <value>Company names goes here!</value>
-  </data>
-  <data name="EmailAddress" xml:space="preserve">
-    <value>Email</value>
-  </data>
-  <data name="EmailAddressRequired" xml:space="preserve">
-    <value>Email addres field  is required</value>
-  </data>
-  <data name="LastName" xml:space="preserve">
-    <value>Last name</value>
-  </data>
-  <data name="LastNameRequired" xml:space="preserve">
-    <value>Last name field  is required.</value>
-  </data>
-  <data name="PhoneNumber" xml:space="preserve">
-    <value>Phone</value>
-  </data>
-  <data name="PhoneNumberRequired" xml:space="preserve">
-    <value>Phone number field is required.</value>
-  </data>
-  <data name="Position" xml:space="preserve">
-    <value>Position</value>
-  </data>
-  <data name="PositionRequired" xml:space="preserve">
-    <value>PositionIsRequiredField</value>
-  </data>
-  <data name="Resume" xml:space="preserve">
-    <value>Resume</value>
-  </data>
-  <data name="ResumeRequired" xml:space="preserve">
-    <value>Resume file has to be attached.</value>
-  </data>
-  <data name="TermsAndConditions" xml:space="preserve">
-    <value>Terms and Conditions</value>
-  </data>
-  <data name="TermsAndConditionsRequired" xml:space="preserve">
-    <value>You have to agree with Terms and Conditions.</value>
-  </data>
   <data name="About" xml:space="preserve">
-    <value>About</value>
+    <value>O aplikacji</value>
   </data>
   <data name="AboutLong" xml:space="preserve">
-    <value>Application allow gathering and reviewing Curriculum Vitae.</value>
+    <value>Aplikacja pozwalająca na gromadzenie i przeglądanie Curriculum Vitae.</value>
+  </data>
+  <data name="AddACandidate" xml:space="preserve">
+    <value>Dodaj kandydata</value>
+  </data>
+  <data name="ApplicationAddedToDatabase" xml:space="preserve">
+    <value>Twoja aplikacja została dodana do naszej bazy kandydatów.
+Dziękujemy za złożenie swojej kandydatury, CV AppTeam!</value>
   </data>
   <data name="Author" xml:space="preserve">
-    <value>Author</value>
+    <value>Autor</value>
   </data>
   <data name="Candidates" xml:space="preserve">
-    <value>Candidates</value>
+    <value>Kandydaci</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>Miasto</value>
+  </data>
+  <data name="CompanyNameGoesHere" xml:space="preserve">
+    <value>Miejsce na nazwę firmy</value>
   </data>
   <data name="Contact" xml:space="preserve">
-    <value>Contact</value>
+    <value>Kontakt</value>
   </data>
   <data name="CvCollector" xml:space="preserve">
     <value>CV Collector</value>
   </data>
   <data name="CVList" xml:space="preserve">
-    <value>Resume list</value>
+    <value>Lista CV</value>
   </data>
   <data name="DownloadFile" xml:space="preserve">
-    <value>Download</value>
+    <value>Pobierz</value>
   </data>
-  <data name="WantContact" xml:space="preserve">
-    <value>Want to contact me?</value>
+  <data name="EmailAddress" xml:space="preserve">
+    <value>Email</value>
   </data>
-  <data name="WantMore" xml:space="preserve">
-    <value>Want to know more?</value>
+  <data name="EmailAddressRequired" xml:space="preserve">
+    <value>Pole email jest polem obowiązkowym.</value>
   </data>
-  <data name="AddACandidate" xml:space="preserve">
-    <value>Add a Candidate</value>
+  <data name="FirstName" xml:space="preserve">
+    <value>Imię</value>
+  </data>
+  <data name="FirstNameRequired" xml:space="preserve">
+    <value>Pole imie jest polem obowiązkowym.</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Nazwisko</value>
+  </data>
+  <data name="LastNameRequired" xml:space="preserve">
+    <value>Pole nazwisko jest polem obowiązkowym.</value>
   </data>
   <data name="LogIn" xml:space="preserve">
-    <value>Log in</value>
-  </data>
-  <data name="Register" xml:space="preserve">
-    <value>Register</value>
+    <value>Zaloguj</value>
   </data>
   <data name="LogOff" xml:space="preserve">
-    <value>Log off</value>
+    <value>Wyloguj</value>
+  </data>
+  <data name="PhoneNumber" xml:space="preserve">
+    <value>Telefon</value>
+  </data>
+  <data name="PhoneNumberRequired" xml:space="preserve">
+    <value>Pole telefon jest polem obowiązkowym.</value>
+  </data>
+  <data name="Position" xml:space="preserve">
+    <value>Stanowisko</value>
+  </data>
+  <data name="PositionRequired" xml:space="preserve">
+    <value>Pole stanowisko jest polem obowiązkowym.</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Zarejestruj</value>
+  </data>
+  <data name="Resume" xml:space="preserve">
+    <value>CV</value>
+  </data>
+  <data name="ResumeRequired" xml:space="preserve">
+    <value>CV musi zostać załączone</value>
+  </data>
+  <data name="TermsAndConditions" xml:space="preserve">
+    <value>Regulamin i Warunki</value>
+  </data>
+  <data name="TermsAndConditionsRequired" xml:space="preserve">
+    <value>Regulamin i Warunki muszą zostać zaakceptowane.</value>
+  </data>
+  <data name="WantContact" xml:space="preserve">
+    <value>Chcesz się skontaktować?</value>
+  </data>
+  <data name="WantMore" xml:space="preserve">
+    <value>Chcesz się dowiedzieć więcej?</value>
   </data>
 </root>

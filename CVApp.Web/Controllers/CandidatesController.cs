@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Mail;
 using System.Web.Mvc;
+using CVApp.Web.Helpers;
 
 
 namespace CVApp.Web.Controllers
@@ -32,7 +33,7 @@ namespace CVApp.Web.Controllers
         [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(CandidateViewModel viewModel, byte[] upload)
+        public ActionResult Create(CandidateViewModel viewModel)
         {
             if (!ModelState.IsValid)
             {
@@ -40,14 +41,6 @@ namespace CVApp.Web.Controllers
                 return View("Create", viewModel);
             }
 
-            //byte[] uploadedFile = new byte[upload.Length];
-            //using (var fs = new FileStream(string.Empty, FileMode.Append))
-            //{
-            //    using (var reader = new BinaryReader(fs))
-            //    {
-            //        uploadedFile = reader.ReadBytes(upload.);
-            //    }
-            //}
 
             var candidate = new Candidate()
             {
@@ -60,9 +53,11 @@ namespace CVApp.Web.Controllers
                 HasAcceptedAgreements = viewModel.HasAcceptedAgreements,
                 PositionId = viewModel.PositionId,
                 CreationDate = DateTime.Now,
-                ModificationDate = DateTime.Now
-                //ResumeFile = uploadedFile
+                ModificationDate = DateTime.Now 
             };
+            
+            candidate.SetContentOfFile(viewModel.ResumeFile);
+
             _context.Candidates.Add(candidate);
             _context.SaveChanges();
 
