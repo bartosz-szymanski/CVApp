@@ -19,7 +19,7 @@ namespace CVApp.Web.Controllers
         {
             var collection = _context.Candidates.Include(c => c.Position).OrderBy(c => c.Id);
 
-            int pageSize = 3;
+            int pageSize = 5;
             int pageNumber = (page ?? 1);
             return View(collection.ToPagedList(pageNumber, pageSize));
         }

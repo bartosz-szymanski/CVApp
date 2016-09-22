@@ -2,9 +2,11 @@
 using CVApp.Web.ViewModels;
 using Microsoft.AspNet.Identity;
 using System;
-using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Web.Mvc;
+
 
 namespace CVApp.Web.Controllers
 {
@@ -38,16 +40,16 @@ namespace CVApp.Web.Controllers
                 return View("Create", viewModel);
             }
 
-            byte[] uploadedFile = new byte[upload.Length];
-            using (var fs = new FileStream(string.Empty, FileMode.Append))
-            {
-                using (var reader = new BinaryReader(fs))
-                {
-                    uploadedFile = reader.ReadBytes(upload.);
-                }
-            }
+            //byte[] uploadedFile = new byte[upload.Length];
+            //using (var fs = new FileStream(string.Empty, FileMode.Append))
+            //{
+            //    using (var reader = new BinaryReader(fs))
+            //    {
+            //        uploadedFile = reader.ReadBytes(upload.);
+            //    }
+            //}
 
-            var gig = new Candidate()
+            var candidate = new Candidate()
             {
                 FirstName = viewModel.FirstName,
                 LastName = viewModel.LastName,
@@ -58,13 +60,29 @@ namespace CVApp.Web.Controllers
                 HasAcceptedAgreements = viewModel.HasAcceptedAgreements,
                 PositionId = viewModel.PositionId,
                 CreationDate = DateTime.Now,
-                ModificationDate = DateTime.Now,
-                ResumeFile = uploadedFile
+                ModificationDate = DateTime.Now
+                //ResumeFile = uploadedFile
             };
-            _context.Candidates.Add(gig);
+            _context.Candidates.Add(candidate);
             _context.SaveChanges();
 
+            SendMailToCandidate(candidate);
+
             return RedirectToAction("Index", "Home");
+
+        }
+
+        private void SendMailToCandidate(Candidate candidate)
+        {
+            MailMessage message = new MailMessage("CVAppBaybe@hotmail.com", candidate.EmailAddress, Resource.CompanyNameGoesHere, Resource.ApplicationAddedToDatabase);
+            NetworkCredential netCred = new NetworkCredential("CVAppBaybe@hotmail.com", "TesT1279"); //TODO: Move to config file.
+            SmtpClient client = new SmtpClient("smtp.live.com", 587);
+            message.Body = Resource.ApplicationAddedToDatabase;
+            message.Subject = Resource.CompanyNameGoesHere;
+            client.EnableSsl = true;
+            client.Credentials = netCred;
+            client.Send(message);
+
         }
     }
 }
