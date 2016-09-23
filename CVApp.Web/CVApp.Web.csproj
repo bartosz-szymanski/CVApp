@@ -216,6 +216,10 @@
     <Compile Include="Migrations\201609222330521_AddedModelAndDBSetForLogs.Designer.cs">
       <DependentUpon>201609222330521_AddedModelAndDBSetForLogs.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201609230848375_NewColumnInLOgs.cs" />
+    <Compile Include="Migrations\201609230848375_NewColumnInLOgs.Designer.cs">
+      <DependentUpon>201609230848375_NewColumnInLOgs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Enums\LogCategory.cs" />
     <Compile Include="Models\Log.cs" />
@@ -349,6 +353,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201609222330521_AddedModelAndDBSetForLogs.resx">
       <DependentUpon>201609222330521_AddedModelAndDBSetForLogs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609230848375_NewColumnInLOgs.resx">
+      <DependentUpon>201609230848375_NewColumnInLOgs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resource.pl-PL.resx" />
     <EmbeddedResource Include="Resource.resx">
